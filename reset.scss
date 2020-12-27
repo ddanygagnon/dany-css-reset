@@ -1,0 +1,132 @@
+/*
+	* Dany Gagnon reset CSS
+	* Version: 1.0
+*/
+@mixin border-box() {
+	html {
+		box-sizing: border-box;
+	}
+	*, *:before, *:after {
+		box-sizing: inherit;
+	}
+}
+
+$headings-tags: (
+	h1, h2, h3, h4, h5, h6
+);
+
+$tags-with-margins: (
+	 #{$headings-tags}, body, p, blockquote, dd, dl, figure, hr, ol, ul, pre, fieldset, input
+);
+
+$italic-tags: (
+		dfn, cite, em, i, var,
+);
+
+$bold-tags: (
+	b, strong
+);
+
+$tags-with-fonts: (
+	#{$headings-tags}, pre, code, #{$italic-tags}, kbd, mark, samp, small, #{$bold-tags}, sub, sup, th, button, input, optgroup, option, select, textarea
+);
+
+$tags-with-paddings: (
+	'blockquote[type="cite"]', ul, ol, td, th, button,  fieldset, input, legend, option, textarea
+);
+
+$tags-with-borders: (
+	'blockquote[type="cite"]', hr, iframe, table, button, 'button:active', 'button:active:disabled', fieldset, input, select, textarea
+);
+
+$tags-with-colors: (
+	a, hr, 'a:visited', 'a:active', mark, button, input, select
+);
+
+$tags-with-decorations: (
+	a, 'abbr[title]', s, u, del, ins
+);
+
+$tags-with-vertical-align: (
+		sub, sup, tbody, td, tfoot, th, thead, tr
+);
+
+$tags-text-aligning: (
+		caption, button, input
+);
+
+$tags-align-items: (
+		button, input, select
+);
+
+$tags-with-backgrounds: (
+		mark, iframe, button, input, select, textarea
+);
+
+/* Applies a global border box */
+@include border-box;
+
+/* list styling */
+ol, ul {
+	list-style: none;
+}
+
+/* table initial border spacing */
+table {
+	border-spacing: initial;
+}
+
+/* q removing quotes */
+q:before, q:after {
+	content: '';
+}
+
+/* removing background-color */
+#{$tags-with-backgrounds} {
+	background-color: transparent;
+}
+
+/* resetting the vertical align */
+ #{$tags-with-vertical-align} {
+	vertical-align: baseline;
+}
+
+/* text-align to default value */
+#{$tags-text-aligning} {
+	text-align: left;
+}
+
+/* align items to default value */
+#{$tags-align-items} {
+	align-items: stretch;
+}
+
+/* reset tags with borders */
+#{$tags-with-borders} {
+	border: 0;
+}
+
+/* reset tags with padding */
+#{$tags-with-paddings} {
+	padding: 0;
+}
+
+/* reset tags with margins */
+#{$tags-with-margins} {
+	margin: 0;
+}
+
+/* reset the color to inherit */
+#{$tags-with-colors} {
+	color: inherit;
+}
+
+/* remove any text-decorations from these tags */
+#{$tags-with-decorations} {
+	text-decoration: none;
+}
+
+/* remove font specific styling by inheriting */
+#{$tags-with-fonts} {
+	font: inherit;
+}

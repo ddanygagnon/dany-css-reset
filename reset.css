@@ -1,0 +1,79 @@
+/*
+	* Dany Gagnon reset CSS
+	* Version: 1.0
+*/
+/* Applies a global border box */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* list styling */
+ol, ul {
+  list-style: none;
+}
+
+/* table initial border spacing */
+table {
+  border-spacing: initial;
+}
+
+/* q removing quotes */
+q:before, q:after {
+  content: "";
+}
+
+/* removing background-color */
+mark, iframe, button, input, select, textarea {
+  background-color: transparent;
+}
+
+/* resetting the vertical align */
+sub, sup, tbody, td, tfoot, th, thead, tr {
+  vertical-align: baseline;
+}
+
+/* text-align to default value */
+caption, button, input {
+  text-align: left;
+}
+
+/* align items to default value */
+button, input, select {
+  align-items: stretch;
+}
+
+/* reset tags with borders */
+blockquote[type=cite], hr, iframe, table, button, button:active, button:active:disabled, fieldset, input, select, textarea {
+  border: 0;
+}
+
+/* reset tags with padding */
+blockquote[type=cite], ul, ol, td, th, button, fieldset, input, legend, option, textarea {
+  padding: 0;
+}
+
+/* reset tags with margins */
+h1, h2, h3, h4, h5, h6, body, p, blockquote, dd, dl, figure, hr, ol, ul, pre, fieldset, input {
+  margin: 0;
+}
+
+/* reset the color to inherit */
+a, hr, a:visited, a:active, mark, button, input, select {
+  color: inherit;
+}
+
+/* remove any text-decorations from these tags */
+a, abbr[title], s, u, del, ins {
+  text-decoration: none;
+}
+
+/* remove font specific styling by inheriting */
+h1, h2, h3, h4, h5, h6, pre, code, dfn, cite, em, i, var, kbd, mark, samp, small, b, strong, sub, sup, th, button, input, optgroup, option, select, textarea {
+  font: inherit;
+}
+
+/*# sourceMappingURL=reset.css.map */
